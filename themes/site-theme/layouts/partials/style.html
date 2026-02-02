@@ -1,6 +1,7 @@
 <style>
   :root {
     --width: 720px;
+    --radius: 12px;
     --font-main: Verdana, sans-serif;
     --font-secondary: Verdana, sans-serif;
     --font-scale: 1em;
@@ -8,18 +9,28 @@
     --heading-color: #222;
     --text-color: #444;
     --link-color: #3273dc;
-    --visited-color: #8b6fcb;
+    --visited-color: #244fa8;
     --blockquote-color: #222;
+    --table-bg:        #f8fafc;  /* table container */
+    --row-bg:          #ffffff;  /* odd rows */
+    --row-alt-bg:      #f1f5f9;  /* even rows */
+    --row-hover-bg:    #e2e8f0;
+    --table-border:    #cbd5e1;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #01242e;
+      --background-color: #121212;
       --heading-color: #eee;
       --text-color: #ddd;
       --link-color: #8cc2dd;
-      --visited-color: #8b6fcb;
+      --visited-color: #5a8fb3;
       --blockquote-color: #ccc;
+      --table-bg:        #0f172a;
+      --row-bg:          #111827;
+      --row-alt-bg:      #1f2933;
+      --row-hover-bg:    #334155;
+      --table-border:    #475569;
     }
   }
 
@@ -82,7 +93,34 @@
   }
 
   table {
+    background: var(--table-bg);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--radius);
     width: 100%;
+    overflow: hidden;
+  }
+
+  th td {
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: middle;
+  }
+  
+  tbody tr {
+      background: var(--row-bg);
+  }
+
+  tbody tr:nth-child(even) {
+      background: var(--row-alt-bg);
+  }
+
+  tbody tr:hover {
+      background: var(--row-hover-bg);
+  }
+
+  tbody tr + tr td {
+      border-top: 1px solid var(--table-border);
   }
 
   hr {
