@@ -4,24 +4,8 @@ menu = "main"
 weight = 1
 +++
 
-# A match made in heaven
+# Nathaniel S. Flores
 
-There is a website obesity crisis. Bloated websites full of scripts, ads, and trackers are slowing your readers down every time they try to read your well-crafted content.
+I'm a third-year college student pursuing a BA in Geosciences at [Williams College](https://williams.edu/). In general, my main interests lie in the combination of geosciences and computer science, with specific focus on remote sensing and high performance computing. My background spans all levels of the geospatial development stack, from creating end-user data visualizations to creating reproducible builds and effective CI/CD pipelines. Always looking for the next challenging problem to solve.
 
-Hugo Bear Blog is all you need to build a fantastic and optimized site or blog. It works perfectly on **any** viewing device. All you need to focus on is writing good content.
-
-[Go to the original bear blog](https://bearblog.dev/).
-
----
-
-What happens when you combine the worlds' fastest, most lightweight static site generator with a design theme built to provide you with free, no-nonsense, super-fast blogging capabilities?
-
-**Use this theme, and find out!**
-
-Made with 💟 by [Jan Raasch](https://www.janraasch.com).
-
----
-
-Simply publish content online, grow an audience, and keep your pages tiny, fast, and **optimized for search engines**.
-
-Each page is ~5kb, and you can **host your blog yourself**.
+Contact: me (at) nsf (dot) name, or send me a DM on [LinkedIn](https://www.linkedin.com/in/nsflores/).
