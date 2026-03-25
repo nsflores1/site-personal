@@ -101,7 +101,9 @@ server {
     # rest of config, etc.
 }
 ```
-It also means that we can implement FoundryVTT and Minecraft, two hotly requested services from some clubs on campus. For Minecraft, we set up a basic Java server with a prerendered server map on a `cron` job, and thanks to having so much extra compute, it basically doesn't affect performance since it runs in the very early morning (4AM).
+It also means that we can implement FoundryVTT and Minecraft, two hotly requested services from some clubs on campus. For Minecraft, we set up a basic Java server with a prerendered server map on a `cron` job, and thanks to having so much extra compute, it basically doesn't affect performance since it runs in the very early morning (4AM). 
+
+{{< image src="images/wso-minecraft-screenshot.png" alt="The WSO Minecraft sever spawn" caption="*Pictured: WSO Minecraft server spawn*" >}}
 
 Overall it's quite fast and uses even less RAM than I had expected. Even with many users both gaming and on WSO at once, it struggles to make a real dent in the server's impact. Foundry was even easier with less than a couple dozen lines of `nginx` configuration to get working.
 

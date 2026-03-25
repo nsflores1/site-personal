@@ -26,7 +26,7 @@ I decided to keep my sanity, and after several attempts to compile Mailman from 
 
 The trick is simple: loop over the files with a little Bash glue. I'm not copying it here because if you're doing this, you should really just use the Python interface. Unfortunately, the Mailman 3 Python interface is so bad that you'll need to `git clone` their source code and `grep` through it yourself to have any hope of finding the APIs you seek.
 
-The other main problem was convincing Williams College to open up port 25 for us, but once that was done everything was quickly in working order again. Our server could receive mail! (Fortunately `rspamd` can take in Bayesian statistics from `exim`'s mail data, so setting it up as a milter for automatic spam detection was relatively easy. I recommend this, `rspamd` is honestly the least painful part of the mail stack, although connecting it to `postfix` can be. Make sure to drop mail with `spamhaus` at SMTP time and `rspamd` will be nice and idle 90% of the time.)  
+The other main problem was convincing Williams College to open up port 25 for us, but once that was done everything was quickly in working order again. Our server could receive mail! (Fortunately `rspamd` can take in Bayesian statistics from `exim`'s mail data, so setting it up as a milter for automatic spam detection was relatively easy. I recommend this, `rspamd` is honestly the least painful part of the mail stack, although connecting it to `postfix` can be. Make sure to drop mail with `spamhaus` at SMTP time and `rspamd` will be nice and idle 90% of the time.) 
 
 # Web Upgrades
 

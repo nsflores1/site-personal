@@ -1,0 +1,29 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $maxWidth := .Get "width" | default "800" -}}
+
+{{- $img := resources.Get $src -}}
+<figure class="inline-image">
+  {{- if $img -}}
+    {{- $processed := $img.Fit (printf "%sx%s q85 webp" $maxWidth $maxWidth) -}}
+    {{- $fallback := $img.Fit (printf "%sx%s q85" $maxWidth $maxWidth) -}}
+    <picture>
+      <source srcset="{{ $processed.RelPermalink }}" type="image/webp">
+      <img src="{{ $fallback.RelPermalink }}"
+           alt="{{ $alt }}"
+           width="{{ $fallback.Width }}"
+           height="{{ $fallback.Height }}"
+           loading="lazy">
+    </picture>
+  {{- else -}}
+    {{- /* Falls back gracefully for static/ images, with CSS doing the heavy lifting */ -}}
+    <img src="{{ $src | relURL }}"
+         alt="{{ $alt }}"
+         style="max-width: 100%; height: auto;"
+         loading="lazy">
+  {{- end -}}
+  {{- if $caption -}}
+  <figcaption>{{ $caption | markdownify }}</figcaption>
+  {{- end -}}
+</figure>

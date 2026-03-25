@@ -7,6 +7,7 @@
       {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
     </time>
   </i>
+  <span class="reading-time">(Approx. {{ .ReadingTime }} min read)</span>
 </p>
 {{ end }}{{ end }}
 <content>

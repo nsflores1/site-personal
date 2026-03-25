@@ -1,0 +1,47 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+
+    - name: Install LaTeX
+      run: sudo apt-get install -y texlive-latex-extra latexmk
+
+    - name: Build resume
+      run: latexmk -pdf -interaction=nonstopmode resume/resume.tex -outdir=resume/out
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3.0.0
+      with:
+        hugo-version: 'latest'
+        extended: true
+
+    - name: Build site
+      run: hugo --minify
+
+    - name: Copy resume into site
+      run: |
+        mkdir -p static/pdfs
+        cp resume/out/resume.pdf static/pdfs/resume.pdf
+
+    - uses: peaceiris/actions-gh-pages@v4.0.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public    
+
+

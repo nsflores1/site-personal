@@ -1,0 +1,247 @@
+%-------------------------
+% Resume in Latex
+% Author : Nathaniel Flores
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------ 
+
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+
+\usepackage[
+	colorlinks=true,
+	linkcolor=brandeisblue,
+	urlcolor=brandeisblue,
+	citecolor=blue,
+	anchorcolor=blue
+]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{ \vspace{-4pt}\scshape\raggedright\large\bfseries }{}{0em}{}[
+\color{black}
+\titlerule
+\vspace{-5pt}
+]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{ \item\small{ {#1 \vspace{-2pt}} } }
+
+\newcommand{\classesList}[4]{ \item\small{ {#1 #2 #3 #4 \vspace{-2pt}} } }
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-2pt}
+\item
+\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	\textbf{#1}       & \textbf{\small #2} \\
+	\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-8pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{ \item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+	\textit{\small#1} & \textit{\small #2} \\
+\end{tabular*}
+\vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{ \item
+\begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+	\small{#1} & \textbf{\small #2} \\
+\end{tabular*}
+\vspace{-10pt}
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}
+\vspace{-6pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-6pt}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\begin{center}
+		{\Huge \scshape Nathaniel Flores} \\
+		\vspace{1pt}
+		Williamstown, MA, USA\\
+		\vspace{1pt}
+		\href{mailto:nsf1@williams.edu}{\raisebox{-0.2\height}{\faEnvelope}\ \underline{nsf1@williams.edu}}
+		~
+		\href{https://www.linkedin.com/in/nsflores/}{\raisebox{-0.2\height}{\faLinkedin}\ \underline{linkedin.com/in/nsflores/}}
+                ~
+                \href{https://nsf.name/}{\raisebox{-0.2\height}{\faGlobe}\ \underline{nsf.name}}
+		\vspace{-8pt}
+	\end{center}
+
+	%-----------EDUCATION-----------
+	\section{Education}
+	\resumeSubHeadingListStart \resumeSubheading {Williams College}{Expected June 2027}
+	{Bachelor of Arts in Geosciences}{Williamstown, MA}
+        \resumeSubHeadingListStart \resumeSubheading {Columbia University (Kyoto Consortium for Japanese Studies)}{June - July 2024}
+	{Summer intensive language course at Doshisha University campus}{Kyoto, Japan}
+	%\resumeItemListStart \resumeItem{TEXT GOES HERE}
+	%\resumeItem{MORE TEXT GOES HERE}
+	\resumeItemListEnd \resumeSubHeadingListEnd
+
+	%------RELEVANT COURSEWORK-------
+	\section{Relevant Coursework}
+	\begin{multicols}{4}
+          {\small \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item Structural Geology
+
+		\item Mineralogy \& Petrology
+
+                \item Carbon
+
+		\item Mastering GIS
+
+		\item Remote Sensing
+
+		\item Database Programming
+
+		\item Cryosphere
+
+		\item Computer Organization
+            \end{itemize} }
+	\end{multicols}
+	\vspace*{2.0\multicolsep}
+
+	%-----------EXPERIENCE-----------
+	\section{Experience}
+	\resumeSubHeadingListStart
+
+	\resumeSubheading {Williams Students Online}{September 2024 -- Present}
+	{Club President}{Williamstown, MA}
+        \resumeItemListStart
+        \resumeItem{Designed and implemented a \href{https://github.com/nsflores1/wso-mobile}{completely new mobile app} for the college, with over 2,000 active weekly users}
+	\resumeItem{Identified and fixed system state problems with Ansible and Docker, automating backup \& restore of server infrastructure, achieving over 99\% uptime and automated deployment of the production software environment}
+	\resumeItem{Collaborated with college IT and course registrar to port popular features from WSO to internal college infrastructure}
+	\resumeItemListEnd
+
+        \resumeSubheading {GEOS 290: Data Analysis in Earth Science}{February 2026 -- May 2026} {Teaching Assistant}{Williamstown, MA}
+        \resumeItemListStart
+	\resumeItem{Mentored students in essential programming languages such as R, Python, and MATLAB and taught key mathematical concepts from calculus, linear algebra, and differential equations}
+	\resumeItem{Ran weekly office hours and graded student work in a timely manner, providing code style feedback}
+	\resumeItemListEnd
+
+	\resumeSubheading {GEOS 274: Spatial Analysis \& Environmental Change}{August 2025 -- December 2025} {Teaching Assistant}{Williamstown, MA}
+        \resumeItemListStart
+	\resumeItem{Co-authored brand-new curriculum on using spatial statistics for geoscience majors, with a focus on industry-standard technologies such as Google Earth Engine and building coding skills}
+	\resumeItem{Ran regular office hours and did weekly meetings to continue adapting course to student feedback}
+	\resumeItemListEnd
+
+        %% TODO: go back and add GEOS 290 when that happens
+
+	\resumeSubHeadingListEnd
+
+	%-----------PROJECTS-----------
+	%\section{Projects}
+	%\resumeSubHeadingListStart
+
+	%\resumeSubHeadingListEnd
+
+	%-----------RESEARCH-----------
+	\section{Research}
+	\resumeSubHeadingListStart
+
+        \resumeSubheading {University at Buffalo ACT Hydro Lab (NSF REU)}{May 2025 -- August 2025} {Research Assistant}{Buffalo, NY}
+	\resumeItemListStart
+        \resumeItem{Wrote High Performance Computing code with industry-standard Python libraries for a 128-core supercomputer}
+	\resumeItem{Analyzed climate model outputs to investigate the changing role of runoff in Arctic regions under climate change}
+	\resumeItem{Presented research findings \href{https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1874057}{at AGU 2025}; working to publish results in paper at a later date}
+        \resumeItem{Wrote \href{https://github.com/nsflores1/zeitcache}{custom Python library} for handing expensive data operations, published software to PyPi}
+	\resumeItemListEnd
+       
+	\resumeSubHeadingListEnd
+
+	%-----------LEADERSHIP & COMMUNITY-----------
+	\section{Leadership / Community Involvement}
+	\resumeSubHeadingListStart
+        
+        \resumeSubheading {Geosciences Student Advisory Committee}{September 2024 -- Present}
+	{Board Chair}{Williamstown, MA}
+        \resumeItemListStart
+	\resumeItem{Coordinated and executed initiatives \& events to increase the student diversity of the major}
+	\resumeItem{Oversaw networking and informational sessions on the department's course offerings}
+        \resumeItem{Advised students on how to apply for REUs and summer opportunities}
+	\resumeItemListEnd
+
+        \resumeSubheading {Computer Science Student Advisory Committee}{October 2025 -- Present}
+	{Class of '27 Major Representative}{Williamstown, MA}
+        \resumeItemListStart
+	\resumeItem{Built community through monthly student-faculty events and student activies}
+        \resumeItem{Advocated to faculty for more computer science education in the physical sciences}
+        \resumeItem{Improved first-year access to hands-on computer science opportunities around campus}
+	\resumeItemListEnd
+
+	\resumeSubHeadingListEnd
+
+	%-----------TECHNICAL SKILLS-----------
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+          \small{\item{
+              \textbf{Technical Areas}{: GIS, Classical Machine Learning, Backend Dev, Frontend Dev, App Dev, Systems Programming, DevOps} \\
+              \textbf{Programming Languages}{: Python, MATLAB, R, Swift, Java/C\#, C, x86-64 Assembly, Go, Fortran, Bash} \\
+              \textbf{Foreign Languages}{: Japanese (Intermediate, approx. N3), Spanish (Beginner, heritage speaker)} \\
+              \textbf{Certifications}{: FCC General Class Amateur Radio License, Wilderness First Aid \& CPR (SOLO School)} }}
+	\end{itemize}  
+\end{document}

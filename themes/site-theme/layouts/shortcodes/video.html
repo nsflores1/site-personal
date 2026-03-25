@@ -1,0 +1,29 @@
+{{- $src := .Get "src" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $autoplay := .Get "autoplay" | default "false" -}}
+{{- $loop := .Get "loop" | default "false" -}}
+{{- $muted := .Get "muted" | default "true" -}}
+{{- $controls := .Get "controls" | default "true" -}}
+
+{{- /* Derive poster from a co-located image, if it exists */ -}}
+{{- $poster := .Get "poster" | default "" -}}
+
+<figure class="inline-video">
+  <video
+    {{- if eq $controls "true" }} controls{{ end }}
+    {{- if eq $autoplay "true" }} autoplay{{ end }}
+    {{- if eq $loop "true" }} loop{{ end }}
+    {{- if eq $muted "true" }} muted{{ end }}
+    {{- if $poster }} poster="{{ $poster | relURL }}"{{ end }}
+    playsinline
+    preload="metadata"
+    style="max-width: 100%; height: auto; display: block;">
+    <source src="{{ $src | relURL }}" type="video/mp4">
+    {{- /* fallback for browsers that have apparently refused to move past 2008 */ -}}
+    <p>Your browser doesn't support HTML video.
+       <a href="{{ $src | relURL }}">Download the file</a>.</p>
+  </video>
+  {{- if $caption -}}
+  <figcaption>{{ $caption | markdownify }}</figcaption>
+  {{- end -}}
+</figure>

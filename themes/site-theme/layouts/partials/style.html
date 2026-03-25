@@ -1,9 +1,52 @@
 <style>
+  /* TODO: replace with woff2 when Apple supports that someday */
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('/fonts/IBMPlexSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('/fonts/IBMPlexSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('/fonts/IBMPlexMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('/fonts/IBMPlexMono-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
   :root {
-    --width: 720px;
     --radius: 12px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
+    --font-main: 'IBM Plex Sans', Verdana, sans-serif;
+    --font-secondary: 'IBM Plex Sans', Verdana, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
     --font-scale: 1em;
     --background-color: #fff;
     --heading-color: #222;
@@ -34,20 +77,31 @@
     }
   }
 
+  /* shader needs to fullmax out width, so we do this for padding
+  that doesn't look ugly as sin. */
+  .content-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
   body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
     margin: auto;
-    padding: 20px;
     max-width: var(--width);
     text-align: left;
     background-color: var(--background-color);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--text-color);
+    min-height: 100dvh; /* dvh for mobile */
+    display: flex;
+    flex-direction: column;
   }
-
+  
   h1,
   h2,
   h3,
@@ -89,6 +143,7 @@
   }
 
   main {
+    flex: 1; /* consume all vertical slack */
     line-height: 1.6;
   }
 
@@ -101,7 +156,8 @@
     overflow: hidden;
   }
 
-  th td {
+  th,
+  td {
       padding: 0.6rem 0.8rem;
       text-align: left;
       vertical-align: middle;
@@ -133,9 +189,10 @@
   }
 
   code {
-    font-family: monospace;
+    font-family: var(--font-mono);
     padding: 2px;
     border-radius: 3px;
+    text-wrap: wrap;
   }
 
   blockquote {
@@ -146,7 +203,7 @@
   }
 
   footer {
-    padding: 25px 0;
+    /*padding: 25px 0;*/
     text-align: center;
   }
 
