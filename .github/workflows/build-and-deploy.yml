@@ -27,8 +27,7 @@ jobs:
 
     - name: Copy resume into site
       run: |
-        mkdir -p static/pdfs
-        cp resume/out/resume.pdf static/pdfs/resume.pdf
+        cp resume/out/resume.pdf static/resume.pdf
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3.0.0
